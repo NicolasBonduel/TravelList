@@ -12,7 +12,7 @@ const List = ({ allCountries, searchValue, loading }) => {
 
   useEffect(() => {
     const selectedCountries = allCountries.filter((country) =>
-      selectedCountryCodes.includes(country.alpha3Codegit)
+      selectedCountryCodes.includes(country.alpha3Code)
     );
     if (searchValue.length) {
       setCountries([
