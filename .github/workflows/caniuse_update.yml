@@ -1,0 +1,38 @@
+name: Update CanIUse
+
+on:
+  schedule:
+    - cron: '0 6 * * 3'
+
+jobs:
+  update_caniuse:
+    name: Update CanIUse
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Read .nvmrc
+        id: node_version
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ steps.node_version.outputs.NODE_VERSION }}
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Update CanIUse
+        run: npx browserslist@latest --update-db
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: '[CanIUse] Update DB'
+          commit-message: Update caniuse
+          branch: update-caniuse
+          delete-branch: true

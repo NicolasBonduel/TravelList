@@ -1,0 +1,30 @@
+{
+  "parser": "@babel/eslint-parser",
+  "ignorePatterns": ["build/", "node_modules/", ".git/", ".github/", "static/"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:compat/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./src", "./"]
+      }
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "ENV": true
+  }
+}
