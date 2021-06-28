@@ -11,8 +11,8 @@ Alternatively, you can use Docker.
 
 ## Install & run locally
 
-    $ git clone git@github.com:NicolasBonduel/travellist.git
-    $ cd travellist
+    $ git clone git@github.com:NicolasBonduel/TravelList.git
+    $ cd TravelList
 
     // if you use nvm, otherwise, make sure you are using node 14:
     $ nvm use
