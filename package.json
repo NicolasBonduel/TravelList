@@ -6,6 +6,7 @@
     "build:qa": "env ENV=qa npx webpack --config ./webpack/webpack.prod.config.js",
     "lint": "npx eslint .",
     "pretty": "npx prettier .",
+    "test": "npx jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
