@@ -42,6 +42,18 @@ Alternatively, you can use Docker.
 
 You can access this repository's Storybook [here](https://60db5de48b2c160039814add-vgbewjwbhr.chromatic.com)
 
+You can also run it locally with:
+
+    $ npm run storybook
+
+## Tests
+
+Only snapshot tests are set up at the moment. You can run them with:
+
+    $ npm run test
+
+Note: Visual tests are also set up on [Chromatic](https://www.chromatic.com/build?appId=60db5de48b2c160039814add)
+
 ## TODO
 
 - [ ] Convert to TypeScript
