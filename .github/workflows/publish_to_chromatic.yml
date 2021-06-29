@@ -1,4 +1,4 @@
-name: 'Publish to Chromatic'
+name: Publish to Chromatic
 
 on:
   push:
@@ -8,9 +8,12 @@ on:
 jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
+    name: Publish to Chromatic
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
 
       - name: Install dependencies 🔧
         run: npm install
