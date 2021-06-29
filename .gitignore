@@ -8,10 +8,6 @@
 
 # production
 /build
-/config/keys.json
-
-# development
-/development
 
 # misc
 .DS_Store
@@ -24,5 +20,3 @@ yarn-error.log*
 
 # Source maps
 *.map
-
-.lambdaTestLog/
