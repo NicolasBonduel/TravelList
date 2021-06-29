@@ -1,6 +1,8 @@
 # TodoList / TravelList
 
-This is a quick TodoList / TravelList example, with data fetched from [restcountries.eu](https)
+This is a quick TodoList / TravelList example, with data fetched from [restcountries.eu](https://restcountries.eu)
+
+You can find a live demo [here](https://nicolasbonduel.github.io/TravelList)
 
 ---
 
@@ -35,6 +37,10 @@ Alternatively, you can use Docker.
 
     $ npm run build
     $ npm run start
+
+## Storybook
+
+You can access this repository's Storybook [here](https://60db5de48b2c160039814add-vgbewjwbhr.chromatic.com)
 
 ## TODO
 
