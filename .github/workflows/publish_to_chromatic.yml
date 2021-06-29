@@ -1,0 +1,22 @@
+name: 'Publish to Chromatic'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install dependencies 🔧
+        run: npm install
+
+      - name: Publish to Chromatic 🚀
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
