@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Default Default 1`] = `
+Array [
+  <input
+    autoFocus={true}
+    onChange={[Function]}
+    placeholder="Country I want to visit"
+    type="search"
+    value=""
+  />,
+  <section>
+    <ul />
+  </section>,
+]
+`;
+
+exports[`Storyshots Default Default With Persisted Selected 1`] = `
+Array [
+  <input
+    autoFocus={true}
+    onChange={[Function]}
+    placeholder="Country I want to visit"
+    type="search"
+    value=""
+  />,
+  <section>
+    <ul />
+  </section>,
+]
+`;
+
+exports[`Storyshots Default Loading 1`] = `
+Array [
+  <input
+    autoFocus={true}
+    onChange={[Function]}
+    placeholder="Country I want to visit"
+    type="search"
+    value=""
+  />,
+  <section>
+    <ul />
+  </section>,
+]
+`;
+
+exports[`Storyshots Default Loading With Persisted Selected 1`] = `
+Array [
+  <input
+    autoFocus={true}
+    onChange={[Function]}
+    placeholder="Country I want to visit"
+    type="search"
+    value=""
+  />,
+  <section>
+    <ul>
+      <li>
+        <div
+          className=""
+        />
+        <div>
+          <div />
+        </div>
+      </li>
+      <li>
+        <div
+          className=""
+        />
+        <div>
+          <div />
+        </div>
+      </li>
+      <li>
+        <div
+          className=""
+        />
+        <div>
+          <div />
+        </div>
+      </li>
+    </ul>
+  </section>,
+]
+`;
