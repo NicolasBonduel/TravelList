@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Global Global 1`] = `
+<section>
+  <header>
+    <h1>
+      Travel-List
+    </h1>
+  </header>
+  <input
+    autoFocus={true}
+    onChange={[Function]}
+    placeholder="Country I want to visit"
+    type="search"
+    value=""
+  />
+</section>
+`;
+
 exports[`Storyshots TodoList Default 1`] = `
 <input
   autoFocus={true}
