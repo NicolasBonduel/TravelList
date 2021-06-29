@@ -49,9 +49,17 @@ const useAxiosLoadingInfinite = () => ({
 export const Loading = MainComponent.bind({});
 Loading.args = {
   useAxios: useAxiosLoadingInfinite,
-  defaultSearchValue: '',
 };
 Loading.argTypes = {
+  useAxios: { table: { disable: true } },
+};
+
+export const LoadingWhileTyping = MainComponent.bind({});
+LoadingWhileTyping.args = {
+  useAxios: useAxiosLoadingInfinite,
+  defaultSearchValue: 'Loading',
+};
+LoadingWhileTyping.argTypes = {
   useAxios: { table: { disable: true } },
   defaultSearchValue: { table: { disable: true } },
 };

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import usePersistedState from 'hooks/persistedState';
 import styles from './index.scss';
 
+const defaultSkeletonQty = 5;
+
 const List = ({ allCountries, searchValue, loading }) => {
   const [selectedCountryCodes, setSelectedCountryCodes] = usePersistedState(
     'selectedCountryCodes',
@@ -37,17 +39,19 @@ const List = ({ allCountries, searchValue, loading }) => {
     }
   };
 
+  /* We show the loading skeleton only when the user has already selected countries (localStorage),
+     or started typing before the country list has been resolved */
+  if (loading && !(selectedCountryCodes.length || searchValue.length)) {
+    return null;
+  }
+
   return (
     <section className={styles.main}>
       <ul className={styles.todoListContainer}>
-        {/*
-          We show the loading skeleton only when the user has already selected countries,
-          or started typing before the country list has been resolved
-        */}
-        {loading && (selectedCountryCodes.length || searchValue.length) ? (
+        {loading ? (
           <>
-            {[...Array(selectedCountryCodes.length || 5)].map((_el, index) => (
-              // eslint-disable-next-line react/no-array-index-key
+            {[...Array(selectedCountryCodes.length || defaultSkeletonQty)].map((_el, index) => (
+              // eslint-disable-next-line react/no-array-index-key -- All elements are the same
               <li key={index}>
                 <div className={[styles.skeletonButton].join(' ')} />
                 <div className={styles.label}>

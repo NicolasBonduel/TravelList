@@ -31,16 +31,67 @@ Array [
 `;
 
 exports[`Storyshots Default Loading 1`] = `
+<input
+  autoFocus={true}
+  onChange={[Function]}
+  placeholder="Country I want to visit"
+  type="search"
+  value=""
+/>
+`;
+
+exports[`Storyshots Default Loading While Typing 1`] = `
 Array [
   <input
     autoFocus={true}
     onChange={[Function]}
     placeholder="Country I want to visit"
     type="search"
-    value=""
+    value="Loading"
   />,
   <section>
-    <ul />
+    <ul>
+      <li>
+        <div
+          className=""
+        />
+        <div>
+          <div />
+        </div>
+      </li>
+      <li>
+        <div
+          className=""
+        />
+        <div>
+          <div />
+        </div>
+      </li>
+      <li>
+        <div
+          className=""
+        />
+        <div>
+          <div />
+        </div>
+      </li>
+      <li>
+        <div
+          className=""
+        />
+        <div>
+          <div />
+        </div>
+      </li>
+      <li>
+        <div
+          className=""
+        />
+        <div>
+          <div />
+        </div>
+      </li>
+    </ul>
   </section>,
 ]
 `;
