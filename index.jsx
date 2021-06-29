@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import App from './src/index';
+import App from 'src/index';
 
 const init = (selector) => {
   ReactDOM.render(<App />, selector);

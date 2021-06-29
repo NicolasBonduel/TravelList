@@ -1,8 +1,8 @@
 /* eslint-disable no-alert */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/prefer-default-export */
+import countries from '__mocks__/data/countries.json';
 import Component from '.';
-import countries from '../../../__mocks__/data/countries.json';
 
 const MainComponent = (args) => <Component {...args} />;
 

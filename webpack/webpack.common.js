@@ -15,6 +15,7 @@ module.exports = ({ localIdentName }) => ({
       hooks: path.resolve(__dirname, '../src/hooks'),
       components: path.resolve(__dirname, '../src/components'),
       src: path.resolve(__dirname, '../src'),
+      __mocks__: path.resolve(__dirname, '../__mocks__'),
     },
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'],
   },

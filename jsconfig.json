@@ -5,7 +5,8 @@
     "paths": {
       "hooks/*": ["src/hooks/*"],
       "components/*": ["src/components/*"],
-      "src/*": ["src/*"]
+      "src/*": ["src/*"],
+      "__mocks__/*": ["__mocks__/*"]
     }
   },
   "exclude": ["node_modules", "build"]

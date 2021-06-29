@@ -8,6 +8,6 @@ export const parameters = {
   },
 };
 
-import { decorator as persistedStateDecorator } from '../__mocks__/hooks/persistedState';
+import { decorator as persistedStateDecorator } from '__mocks__/hooks/persistedState';
 
 export const decorators = [persistedStateDecorator];
