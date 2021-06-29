@@ -22,18 +22,18 @@ Default.argTypes = {
 };
 
 export default {
-  title: 'Default',
+  title: 'TodoList',
   component: Component,
 };
 
-export const DefaultWithPersistedSelected = MainComponent.bind({});
-DefaultWithPersistedSelected.args = {
+export const WithPersistedSelected = MainComponent.bind({});
+WithPersistedSelected.args = {
   useAxios: useAxiosInstantResponse,
 };
-DefaultWithPersistedSelected.argTypes = {
+WithPersistedSelected.argTypes = {
   useAxios: { table: { disable: true } },
 };
-DefaultWithPersistedSelected.parameters = {
+WithPersistedSelected.parameters = {
   localStorage: {
     selectedCountryCodes: ['CAF', 'FRO', 'NOR'],
   },

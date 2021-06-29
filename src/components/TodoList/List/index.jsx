@@ -39,9 +39,14 @@ const List = ({ allCountries, searchValue, loading }) => {
     }
   };
 
-  /* We show the loading skeleton only when the user has already selected countries (localStorage),
-     or started typing before the country list has been resolved */
+  // We show the loading skeleton only when the user has already selected countries (localStorage),
+  // or started typing before the country list has been resolved
   if (loading && !(selectedCountryCodes.length || searchValue.length)) {
+    return null;
+  }
+
+  // Optimize the DOM -- NOT necessary.
+  if (!loading && !countries.length) {
     return null;
   }
 
@@ -53,7 +58,7 @@ const List = ({ allCountries, searchValue, loading }) => {
             {[...Array(selectedCountryCodes.length || defaultSkeletonQty)].map((_el, index) => (
               // eslint-disable-next-line react/no-array-index-key -- All elements are the same
               <li key={index}>
-                <div className={[styles.skeletonButton].join(' ')} />
+                <div className={styles.skeletonButton} />
                 <div className={styles.label}>
                   <div className={styles.skeletonLabel} />
                 </div>
@@ -67,9 +72,10 @@ const List = ({ allCountries, searchValue, loading }) => {
                 <button
                   id={alpha3Code}
                   aria-label="Add or remove country from my list"
-                  className={`${styles.complete} ${
-                    selectedCountryCodes.includes(alpha3Code) ? styles.selected : ''
-                  }`}
+                  className={[
+                    styles.complete,
+                    selectedCountryCodes.includes(alpha3Code) ? styles.selected : null,
+                  ].join(' ')}
                   onClick={() => handleSelectCountry(alpha3Code)}
                   type="button"
                 />
