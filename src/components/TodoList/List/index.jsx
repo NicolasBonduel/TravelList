@@ -54,7 +54,7 @@ const List = ({ allCountries, searchValue, loading }) => {
     <section className={styles.main}>
       <ul className={styles.todoListContainer}>
         {loading ? (
-          <>
+          <div aria-busy data-testid="loading">
             {[...Array(selectedCountryCodes.length || defaultSkeletonQty)].map((_el, index) => (
               // eslint-disable-next-line react/no-array-index-key -- All elements are the same
               <li key={index}>
@@ -64,7 +64,7 @@ const List = ({ allCountries, searchValue, loading }) => {
                 </div>
               </li>
             ))}
-          </>
+          </div>
         ) : (
           <>
             {countries.map(({ name, alpha3Code }) => (
@@ -77,6 +77,7 @@ const List = ({ allCountries, searchValue, loading }) => {
                     selectedCountryCodes.includes(alpha3Code) ? styles.selected : null,
                   ].join(' ')}
                   onClick={() => handleSelectCountry(alpha3Code)}
+                  tabIndex={0}
                   type="button"
                 />
                 <label htmlFor={alpha3Code} className={styles.label}>

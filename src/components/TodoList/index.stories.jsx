@@ -6,6 +6,11 @@ import Component from '.';
 
 const MainComponent = (args) => <Component {...args} />;
 
+export default {
+  title: 'TodoList',
+  component: Component,
+};
+
 // Loading state
 const useAxiosInstantResponse = () => ({
   response: countries,
@@ -21,9 +26,14 @@ Default.argTypes = {
   useAxios: { table: { disable: true } },
 };
 
-export default {
-  title: 'TodoList',
-  component: Component,
+export const withSearch = MainComponent.bind({});
+withSearch.args = {
+  useAxios: useAxiosInstantResponse,
+  defaultSearchValue: 'Fr',
+};
+withSearch.argTypes = {
+  useAxios: { table: { disable: true } },
+  defaultSearchValue: { table: { disable: true } },
 };
 
 export const WithPersistedSelected = MainComponent.bind({});

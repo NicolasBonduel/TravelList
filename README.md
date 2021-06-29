@@ -48,7 +48,10 @@ You can also run it locally with:
 
 ## Tests
 
-Only snapshot tests are set up at the moment. You can run them with:
+Snapshot tests are run with @storybook/addon-storyshots.
+Unit tests are run with @testing-library/react.
+
+You can run them with:
 
     $ npm run test
 
@@ -59,4 +62,4 @@ Note: Visual tests are also set up on [Chromatic](https://www.chromatic.com/buil
 - [ ] Convert to TypeScript
 - [ ] Handle errors
 - [ ] Improve search result
-- [ ] Create tests on StoryBook with [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
+- [ ] Improve and fix unit tests
